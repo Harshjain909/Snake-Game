@@ -54,7 +54,7 @@ const gameEngine = ()=>{
         eatingSound.play();
         score++;
         if(score>1){
-            speed+=0.3;
+            speed+=0.1;
         }
         document.getElementById("scoreBox").innerText = "Score: " + score;
         snakeArr.unshift({x:snakeArr[0].x + Direction.x, y: snakeArr[0].y + Direction.y});
