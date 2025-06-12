@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.background{
+    background-color: #0f172a;
+    background-size: 50vw 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.zone{
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+
+    width: 43%;
+    height: 90%;
+    border-radius: 2%;
+
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+}
+
+.snakeHead {
+    background-color: crimson;
+    border-radius: 20%;
+}
+
+.snake {
+    background-color: orange;
+    border-radius: 15%;
+}
+
+.foodColor {
+    background-color: limegreen;
+    border-radius: 50%;
+}
+
+
+
+@media (max-width: 600px) {
+    .zone {
+        width: 80%;
+        height: 60%;
+        border-radius: 5%;
+    }
+
+    .background {
+        background-size: 100vw 100vh;
+    }
+}
