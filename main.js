@@ -47,15 +47,16 @@ const gameEngine = ()=>{
             {x:13,y:15}
         ];
         speed= 6;
-        backgroundSound.play(); 
         score=0;
+        document.getElementById("scoreBox").innerText = "Score: 0";
+        backgroundSound.play(); 
     }
 
     if(snakeArr[0].y=== food.y && snakeArr[0].x === food.x){
         eatingSound.play();
         score++;
-        if(score>1){
-            speed+=0.1;
+        if(score>=1){
+            speed+=0.2;
         }
         document.getElementById("scoreBox").innerText = "Score: " + score;
         snakeArr.unshift({x:snakeArr[0].x + Direction.x, y: snakeArr[0].y + Direction.y});
