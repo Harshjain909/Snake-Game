@@ -46,6 +46,7 @@ const gameEngine = ()=>{
         snakeArr = [
             {x:13,y:15}
         ];
+        speed= 6;
         backgroundSound.play(); 
         score=0;
     }
@@ -92,10 +93,14 @@ const gameEngine = ()=>{
     zone.appendChild(foodElement);
 }
 
-backgroundSound.play();
 window.requestAnimationFrame(main);
 
 window.addEventListener('keydown',e=>{
+     // Start background music on first interaction
+    if (backgroundSound.paused) {
+        backgroundSound.play();
+    }
+
     Direction = {x:0,y:1};
     moveSound.play();
     
